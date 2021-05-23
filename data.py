@@ -5,7 +5,7 @@ import plotly.figure_factory as ff
 import random
 
 df=pd.read_csv("medium_data.csv")
-data=df["claps"].tolist()
+data=df["reading_time"].tolist()
 
 """mean=statistics.mean(data)
 std_dev=statistics.stdev(data)
@@ -13,7 +13,7 @@ std_dev=statistics.stdev(data)
 print("Mean is",str(mean))
 print("Std_dev is",str(std_dev))
 
-fig=ff.create_distplot([data],["Claps"],show_hist=False)
+fig=ff.create_distplot([data],["reading_time"],show_hist=False)
 fig.show()"""
 
 
@@ -29,7 +29,7 @@ def randomSetOfMean(counter):
 
 def show_fig(mean_list):
         df=mean_list
-        fig=ff.create_distplot([df],["Claps"],show_hist=False)
+        fig=ff.create_distplot([df],["Reading_Time"],show_hist=False)
         fig.show()
 
 
